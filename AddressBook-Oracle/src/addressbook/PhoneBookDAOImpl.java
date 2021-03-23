@@ -34,10 +34,10 @@ private Connection getConnection() throws SQLException{
 			rs = stmt.executeQuery(sql);
 			
 			while (rs.next()) {
-				Long id = rs.getLong("id");
-				String name = rs.getString("name");
-				String hp = rs.getString("hp");
-				String tel = rs.getString("tel");
+				Long id = rs.getLong(1);
+				String name = rs.getString(2);
+				String hp = rs.getString(3);
+				String tel = rs.getString(4);
 				
 				PhoneBookVo vo = new PhoneBookVo(id, name, hp, tel);
 				list.add(vo);
