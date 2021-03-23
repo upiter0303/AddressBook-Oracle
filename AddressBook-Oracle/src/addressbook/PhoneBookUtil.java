@@ -37,8 +37,15 @@ public class PhoneBookUtil {
 	public void listDelete(Long delNum) {
 		PhoneBookDAO dao = new PhoneBookDAOImpl();
 		boolean success = dao.delete(delNum);
-		
 		System.out.println("삭제 " + (success ? "완료":"실패"));
+		while (!success) {
+			System.out.println("다시 입력해 주세요 (0 입력시 취소)");
+			Scanner s = new Scanner(System.in);
+			delNum = s.nextLong();
+			if(delNum == 0) break;
+			success = dao.delete(delNum);
+			System.out.println("삭제 " + (success ? "완료":"실패"));
+		}
 	}
 	
 	public void listSearch(String toSearch) {

@@ -31,10 +31,6 @@ public class PhoneBookMessage {
 		System.out.print(">");
 	}
 	
-	public void c30() {
-		System.out.println("작업이 종료되었습니다");
-	}
-	
 	public void c4() {
 		System.out.println("[4] 검색");
 		System.out.println("검색할 내용을 입력해주세요");

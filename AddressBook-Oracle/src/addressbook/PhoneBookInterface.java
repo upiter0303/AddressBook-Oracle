@@ -22,7 +22,6 @@ public class PhoneBookInterface {
 				case 3:
 					msg.c3();
 					util.listDelete(sc.nextLong());
-					msg.c30();
 					continue;
 				case 4:
 					msg.c4();
